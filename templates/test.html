@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello</p><br><br>
+    <a href="./"><button type="button">All Events</button></a>
+    <a href="./fundraisers"><button type="button">Fundraisers</button></a><br>
+    <!-- event extracts each event, which is a dictionary from the list -->
+    <!-- attributes in this dictionary, is another dictionary  -->
+    {% for event in events:%}
+        <h1>{{event[0]}}</h1><br>      <!-- title -->
+        <img src= "{{event[1]}}" alt="Pic"> <!-- media -->    
+        <p>{{event[2]}}</p><br>     <!-- description -->
+        <p>{{event[3]}}</p><br>        <!-- eventDate -->
+        <p>{{event[4]}}</p>      <!-- category -->
+    {% endfor %}
+    
+</body>
+</html>
